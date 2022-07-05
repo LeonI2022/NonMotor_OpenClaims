@@ -185,7 +185,7 @@
                   <av:Size x:Key="ShapeSize">200,66</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Sequence Open Claims" sap:VirtualizedContainerService.HintSize="708,6889" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence DisplayName="Sequence Open Claims" sap:VirtualizedContainerService.HintSize="708,7277" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="s:String[]" Name="ExcelFiles" />
                   <Variable x:TypeArguments="ui:GenericValue" Name="ArSumv" />
@@ -217,13 +217,13 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uit:TerminalSession ContinueOnError="{x:Null}" ExistingConnection="{x:Null}" OutputConnection="{x:Null}" SSHPassword="{x:Null}" SSHUserName="{x:Null}" CloseConnection="False" ConnectionString="{}{'AttachExisting':false,'ConnectionProtocol':0,'ConnectionType':2,'EhllBasicMode':false,'EhllDll':'C:\\Program Files (x86)\\IBM\\Client Access\\Emulator\\pcshll32.dll','EhllEnhanced':true,'EhllFunction':'hllapi','EhllSession':'A','EnableSSL':false,'Host':null,'InProcessMode':true,'Mode':1,'Port':23,'Profile':null,'ProviderType':4,'ShowTerminal':true,'TerminalType':0}" DelayMS="[Delay]" DisplayName="Terminal Session" sap:VirtualizedContainerService.HintSize="666,6797" sap2010:WorkflowViewState.IdRef="TerminalSession_1" TimeoutMS="50000">
+                <uit:TerminalSession ContinueOnError="{x:Null}" ExistingConnection="{x:Null}" OutputConnection="{x:Null}" SSHPassword="{x:Null}" SSHUserName="{x:Null}" CloseConnection="False" ConnectionString="{}{'AttachExisting':false,'ConnectionProtocol':0,'ConnectionType':2,'EhllBasicMode':false,'EhllDll':'C:\\Program Files (x86)\\IBM\\Client Access\\Emulator\\pcshll32.dll','EhllEnhanced':true,'EhllFunction':'hllapi','EhllSession':'A','EnableSSL':false,'Host':null,'InProcessMode':true,'Mode':1,'Port':23,'Profile':null,'ProviderType':4,'ShowTerminal':true,'TerminalType':0}" DelayMS="[Delay]" DisplayName="Terminal Session" sap:VirtualizedContainerService.HintSize="666,7185" sap2010:WorkflowViewState.IdRef="TerminalSession_1" TimeoutMS="50000">
                   <uit:TerminalSession.Body>
                     <ActivityAction x:TypeArguments="uit:TerminalConnection">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="uit:TerminalConnection" Name="terminalSession" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="SET CLAIM NUMBER ON 334" sap:VirtualizedContainerService.HintSize="632,6698" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <Sequence DisplayName="SET CLAIM NUMBER ON 334" sap:VirtualizedContainerService.HintSize="632,7086" sap2010:WorkflowViewState.IdRef="Sequence_8">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -252,13 +252,13 @@
                             <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("C:\Users\leon.I\Documents\UiPath\NonMotor_OpenClaims\ToDo")]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="590,6308" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[ExcelFiles]">
+                        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="590,6696" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[ExcelFiles]">
                           <ui:ForEach.Body>
                             <ActivityAction x:TypeArguments="x:String">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:String" Name="file" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Body For each" sap:VirtualizedContainerService.HintSize="554,6175" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <Sequence DisplayName="Body For each" sap:VirtualizedContainerService.HintSize="554,6563" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="ui:WorkbookApplication" Name="workbook" />
                                   <Variable x:TypeArguments="x:String" Name="str_ArZimias" />
@@ -563,6 +563,25 @@
                                 <uit:TerminalSetFieldAtPosition Column="2" DelayMS="[Delay]" DisplayName="Set Field at Position" sap:VirtualizedContainerService.HintSize="512,87" sap2010:WorkflowViewState.IdRef="TerminalSetFieldAtPosition_8" Row="[row]" Text="1" TimeoutMS="5000" WaitType="READY" />
                                 <uit:TerminalSendControlKey DelayMS="[Delay]" DisplayName="Send Control Key" sap:VirtualizedContainerService.HintSize="512,59" sap2010:WorkflowViewState.IdRef="TerminalSendControlKey_11" Key="Transmit" TimeoutMS="5000" WaitType="READY" />
                                 <uit:TerminalSetFieldAtPosition Column="60" DelayMS="[Delay]" DisplayName="Set Field at Position" sap:VirtualizedContainerService.HintSize="512,87" sap2010:WorkflowViewState.IdRef="TerminalSetFieldAtPosition_9" Row="24" Text="1" TimeoutMS="5000" WaitType="READY" />
+                                <Assign sap:VirtualizedContainerService.HintSize="512,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="ui:GenericValue">[row]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="ui:GenericValue">[16]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="512,248" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_4">
+                                  <ui:InterruptibleWhile.Body>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </Sequence>
+                                  </ui:InterruptibleWhile.Body>
+                                </ui:InterruptibleWhile>
                               </Sequence>
                             </ActivityAction>
                           </ui:ForEach.Body>
